@@ -52,24 +52,24 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://zuoanzoom.github.io/tags/Hexo/</loc>
+    <lastmod>2021-03-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zuoanzoom.github.io/tags/Github/</loc>
+    <lastmod>2021-03-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
     <loc>https://zuoanzoom.github.io/categories/Life/</loc>
-    <lastmod>2021-03-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zuoanzoom.github.io/categories/Hexo/</loc>
-    <lastmod>2021-03-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zuoanzoom.github.io/categories/Github/</loc>
     <lastmod>2021-03-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
