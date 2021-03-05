@@ -19,6 +19,7 @@
     <title>C++ Polymorphism 简单探讨</title>
     <url>/2021/03/05/C-Polymorphism-%E7%AE%80%E5%8D%95%E6%8E%A2%E8%AE%A8/</url>
     <content><![CDATA[<p>关于 C++ 中多态 Polymorphism 的实现，我们都知道要通过虚函数 virtual function。记得我第一次接触多态的例程的时候，在父类 Base Class 中，并没有在需要子类 Derived Class 重定义的函数前声明 virtual，不过即便如此，也一样实现了多态。后来，我学习到 virtual function 的时候才发现，奇怪，不使用 virtual 也可以在子类中对函数进行重定义，那么 virtual 函数的不同在哪里呢？</p>
+<span id="more"></span>
 <h1 id="讨论-1">讨论 1</h1>
 <blockquote>
 <p><strong>C++ 的 non-virtual 函数可以重定义，那么 virtual 函数相比 non-virtual 函数有什么不一样？</strong></p>
