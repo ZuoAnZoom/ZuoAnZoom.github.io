@@ -44,7 +44,7 @@
 </div>
 <p>另外，virtual 函数调用要通过虚表 virtual table 找到对应的函数指针，而 non-virtual 函数在编译的时候就已经确定了调用函数的地址。所以，调用函数的效率上 non-virtual 函数高一些。</p>
 <h1 id="讨论-3">讨论 3</h1>
-<p><strong>总结：</strong></p>
+<p><span class="github-emoji" data-alias="star" style data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8">⭐</span> <strong>总结：</strong></p>
 <ul>
 <li>virtual 可以实现多态，这是我们都知道的。</li>
 <li>non-virtual 也可以实现多态特性，但是在进行指针调用时候无法访问到子类的正确方法上，这一点需要注意。</li>
@@ -120,6 +120,7 @@
     <url>/2021/03/04/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<p>我的博客中所用的技术等其他关于本博客的说明内容。</p>
 <h1 id="文章列表">文章列表</h1>
+<p><a href="https://zuoanzoom.github.io/2021/03/05/C-Polymorphism-%E7%AE%80%E5%8D%95%E6%8E%A2%E8%AE%A8/">C++ Polymorphism 简单探讨</a></p>
 <p><a href="https://zuoanzoom.github.io/2021/03/04/Linux-%E6%8E%A8%E8%8D%90%E8%BD%AF%E4%BB%B6%E7%9B%AE%E5%BD%95/">Linux-推荐软件目录</a></p>
 <p><a href="https://zuoanzoom.github.io/2021/03/04/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/">我的博客</a></p>
 <p><a href="https://zuoanzoom.github.io/2021/03/04/hello-world/">Hello World</a></p>
