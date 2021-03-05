@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Hello World</title>
-    <url>/2021/03/04/hello-world/</url>
+    <url>/hello-world/</url>
     <content><![CDATA[<p>欢迎来到我的博客 <span class="github-emoji" data-alias="tada" style data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8">🎉</span></p>
 <p>祝各位都能找到需要的东西 <span class="github-emoji" data-alias="bulb" style data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4a1.png?v8">💡</span></p>
 <p>另外，胃口超棒 <span class="github-emoji" data-alias="smile" style data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">😄</span></p>
@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <title>Linux 推荐软件目录[长期更新]</title>
-    <url>/2021/03/04/Linux-%E6%8E%A8%E8%8D%90%E8%BD%AF%E4%BB%B6%E7%9B%AE%E5%BD%95/</url>
+    <url>/Linux-%E6%8E%A8%E8%8D%90%E8%BD%AF%E4%BB%B6%E7%9B%AE%E5%BD%95/</url>
     <content><![CDATA[<p><span class="github-emoji" data-alias="star2" style data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f31f.png?v8">🌟</span> 主要精选 Linux 下的一些发行版、软件及通用字体等。都是我曾经和现在使用过及正在使用的，均不做过多介绍，感兴趣的可以自己填坑，这样有助于个人提高。</p>
 <h1 id="linux-distro">Linux Distro</h1>
 <ol type="1">
@@ -73,7 +73,7 @@
   </entry>
   <entry>
     <title>我的博客[持续更新]</title>
-    <url>/2021/03/04/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/</url>
+    <url>/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<p>我的博客中所用的技术等其他关于本博客的说明内容。</p>
 <h1 id="文章列表">文章列表</h1>
 <p><a href="https://zuoanzoom.github.io/2021/03/04/Linux-%E6%8E%A8%E8%8D%90%E8%BD%AF%E4%BB%B6%E7%9B%AE%E5%BD%95/">Linux-推荐软件目录</a></p>
