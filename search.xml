@@ -3,10 +3,11 @@
   <entry>
     <title>Hello World</title>
     <url>/2021/03/04/hello-world/</url>
-    <content><![CDATA[<p>欢迎来到我的博客 <span class="github-emoji" alias="tada" style fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8">&#x1f389;</span> </p>
-<p>祝各位都能找到需要的东西 <span class="github-emoji" alias="bulb" style fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4a1.png?v8">&#x1f4a1;</span> </p>
-<p>另外，胃口超棒 <span class="github-emoji" alias="smile" style fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">&#x1f604;</span> </p>
-<span id="more"></span>]]></content>
+    <content><![CDATA[<p>欢迎来到我的博客 <span class="github-emoji" data-alias="tada" style data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8">🎉</span></p>
+<p>祝各位都能找到需要的东西 <span class="github-emoji" data-alias="bulb" style data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4a1.png?v8">💡</span></p>
+<p>另外，胃口超棒 <span class="github-emoji" data-alias="smile" style data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">😄</span></p>
+<span id="more"></span>
+]]></content>
       <categories>
         <category>Life</category>
       </categories>
@@ -17,20 +18,31 @@
   <entry>
     <title>Linux 推荐软件目录[长期更新]</title>
     <url>/2021/03/04/Linux-%E6%8E%A8%E8%8D%90%E8%BD%AF%E4%BB%B6%E7%9B%AE%E5%BD%95/</url>
-    <content><![CDATA[<p>以下为推荐内容</p>
-<h1 id="Linux-Distro"><a href="#Linux-Distro" class="headerlink" title="Linux Distro"></a>Linux Distro</h1><ol>
+    <content><![CDATA[<p><span class="github-emoji" data-alias="star2" style data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f31f.png?v8">🌟</span> 主要精选 Linux 下的一些发行版、软件及通用字体等。都是我曾经和现在使用过及正在使用的，均不做过多介绍，感兴趣的可以自己填坑，这样有助于个人提高。</p>
+<h1 id="linux-distro">Linux Distro</h1>
+<ol type="1">
 <li><a href="https://pop.system76.com/">Pop_OS</a> : based on debian</li>
-<li><a href="https://linuxmint.com/">Linux Mint</a>: based on debian<span id="more"></span></li>
+<li><a href="https://linuxmint.com/">Linux Mint</a>: based on debian <span id="more"></span></li>
 <li><a href="https://archlinux.org/">Arch Linux</a></li>
 <li><a href="https://manjaro.org/">Manjaro</a>: based on Arch</li>
 </ol>
-<h1 id="Fonts"><a href="#Fonts" class="headerlink" title="Fonts"></a>Fonts</h1><ol>
+<h1 id="fonts">Fonts</h1>
+<ol type="1">
 <li><a href="https://github.com/tonsky/FiraCode">Fira Code</a></li>
 </ol>
-<h1 id="Terminal-emulator"><a href="#Terminal-emulator" class="headerlink" title="Terminal emulator"></a>Terminal emulator</h1><ol>
+<h1 id="terminal-emulator">Terminal emulator</h1>
+<ol type="1">
 <li><a href="https://github.com/alacritty/alacritty">Alacritty</a></li>
+<li><a href="https://st.suckless.org/">st</a></li>
 </ol>
-<h1 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h1><ol>
+<h1 id="text-editor">Text Editor</h1>
+<ol type="1">
+<li><a href="https://www.vim.org/">Vim</a></li>
+<li><a href="https://www.sublimetext.com/">Sublime</a></li>
+<li><a href="https://code.visualstudio.com/">VSCode</a></li>
+</ol>
+<h1 id="tools-required">Tools REQUIRED</h1>
+<ol type="1">
 <li><a href="https://github.com/tmux/tmux/wiki">TMUX</a></li>
 <li><a href="https://github.com/ranger/ranger">ranger</a></li>
 <li><a href="https://github.com/powerline/powerline">Powerline</a></li>
@@ -39,8 +51,16 @@
 <li><a href="https://github.com/TheAssassin/AppImageLauncher">AppImageLauncher</a></li>
 <li><a href="https://www.syntevo.com/smartgit/">SmartGit</a></li>
 </ol>
-<h1 id="Take-Notes"><a href="#Take-Notes" class="headerlink" title="Take Notes"></a>Take Notes</h1><ol>
-<li><a href="https://github.com/vnotex/vnote/releases">VNote-2.10</a>: 少Qt库，会导致 Fcitx 输入法无法使用，需要拆包加库重组，见<a href="https://github.com/vnotex/vnote/issues/1505#issuecomment-726603598">#1505 (comment)</a></li>
+<h1 id="window-manager">Window Manager</h1>
+<ol type="1">
+<li><a href="https://dwm.suckless.org/">dwm</a></li>
+<li><a href="https://i3wm.org/">i3</a></li>
+<li>对于大多数人，推荐用 Pop!_OS 20.04 自带的 WM 先感受一下！</li>
+</ol>
+<h1 id="take-notes">Take Notes</h1>
+<ol type="1">
+<li><p><a href="https://github.com/vnotex/vnote/releases">VNote-2.10</a>: 少Qt库，会导致 Fcitx 输入法无法使用，需要拆包加库重组，见<a href="https://github.com/vnotex/vnote/issues/1505#issuecomment-726603598">#1505 (comment)</a></p></li>
+<li><p><a href="https://launchpad.net/~umang/+archive/ubuntu/indicator-stickynotes">indicator-stickynotes</a></p></li>
 </ol>
 ]]></content>
       <categories>
@@ -48,23 +68,37 @@
       </categories>
       <tags>
         <tag>Linux</tag>
+        <tag>Software</tag>
       </tags>
   </entry>
   <entry>
     <title>我的博客[持续更新]</title>
     <url>/2021/03/04/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<p>我的博客中所用的技术等其他关于本博客的说明内容。</p>
-<h1 id="文章列表"><a href="#文章列表" class="headerlink" title="文章列表"></a>文章列表</h1><p><a href="https://zuoanzoom.github.io/2021/03/04/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/">我的博客</a><br><a href="https://zuoanzoom.github.io/2021/03/04/hello-world/">Hello World</a></p>
+<h1 id="文章列表">文章列表</h1>
+<p><a href="https://zuoanzoom.github.io/2021/03/04/Linux-%E6%8E%A8%E8%8D%90%E8%BD%AF%E4%BB%B6%E7%9B%AE%E5%BD%95/">Linux-推荐软件目录</a></p>
+<p><a href="https://zuoanzoom.github.io/2021/03/04/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/">我的博客</a></p>
+<p><a href="https://zuoanzoom.github.io/2021/03/04/hello-world/">Hello World</a></p>
 <span id="more"></span>
-
-<h1 id="博客-Tech"><a href="#博客-Tech" class="headerlink" title="博客 Tech"></a>博客 Tech</h1><p><span class="github-emoji" alias="mag" style fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png?v8">&#x1f50d;</span> <a href="https://hexo.io/zh-cn/">Hexo</a> + <a href="https://pages.github.com/">Github Pages</a></p>
-<p><span class="github-emoji" alias="mag" style fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png?v8">&#x1f50d;</span> <a href="https://theme-next.js.org/">NexT Theme</a></p>
-<p><span class="github-emoji" alias="mag" style fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png?v8">&#x1f50d;</span> <a href="https://nodejs.org/en/">Node.js</a></p>
-<p><span class="github-emoji" alias="mag" style fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png?v8">&#x1f50d;</span> <a href="https://www.npmjs.com/">npm</a></p>
-<p><span class="github-emoji" alias="mag" style fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png?v8">&#x1f50d;</span> <a href="https://github.com/next-theme/hexo-filter-emoji">hexo-filter-emoji</a></p>
-<p><span class="github-emoji" alias="mag" style fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png?v8">&#x1f50d;</span> <a href="https://www.webfx.com/tools/emoji-cheat-sheet/">emoji cheet sheet</a></p>
-<p><span class="github-emoji" alias="mag" style fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png?v8">&#x1f50d;</span> <a href="https://imgtu.com/">路过图床</a></p>
-<p><span class="github-emoji" alias="mag" style fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png?v8">&#x1f50d;</span> <a href="https://github.com/gitalk/gitalk">Gitalk</a></p>
+<h1 id="博客-tech">博客 Tech</h1>
+<p><em><font color="gray">基础建站：</font></em></p>
+<p><span class="github-emoji" data-alias="mag" style data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png?v8">🔍</span> <a href="https://hexo.io/zh-cn/">Hexo</a> + <a href="https://pages.github.com/">Github Pages</a></p>
+<p><span class="github-emoji" data-alias="mag" style data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png?v8">🔍</span> <a href="https://theme-next.js.org/">NexT Theme</a></p>
+<p><span class="github-emoji" data-alias="mag" style data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png?v8">🔍</span> <a href="https://nodejs.org/en/">Node.js</a></p>
+<p><span class="github-emoji" data-alias="mag" style data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png?v8">🔍</span> <a href="https://www.npmjs.com/">npm</a></p>
+<p><em><font color="gray">emoji：</font></em></p>
+<p><span class="github-emoji" data-alias="mag" style data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png?v8">🔍</span> <a href="https://github.com/next-theme/hexo-filter-emoji">hexo-filter-emoji</a></p>
+<p><span class="github-emoji" data-alias="mag" style data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png?v8">🔍</span> <a href="https://www.webfx.com/tools/emoji-cheat-sheet/">emoji cheet sheet</a></p>
+<p><em><font color="gray">图床和评论系统：</font></em></p>
+<p><span class="github-emoji" data-alias="mag" style data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png?v8">🔍</span> <a href="https://imgtu.com/">路过图床</a></p>
+<p><span class="github-emoji" data-alias="mag" style data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png?v8">🔍</span> <a href="https://github.com/gitalk/gitalk">Gitalk</a></p>
+<p><em><font color="gray">文档渲染和公式显示：</font></em></p>
+<p><span class="github-emoji" data-alias="mag" style data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png?v8">🔍</span> <a href="https://github.com/wzpan/hexo-renderer-pandoc">hexo-renderer-pandoc</a></p>
+<p><span class="github-emoji" data-alias="mag" style data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png?v8">🔍</span> <a href="https://www.mathjax.org/">Mathjax</a></p>
+<p><span class="github-emoji" data-alias="mag" style data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png?v8">🔍</span> <a href="https://pandoc.org/">Pandoc</a></p>
+<p><em><font color="gray">搜索功能和计数工具：</font></em></p>
+<p><span class="github-emoji" data-alias="mag" style data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png?v8">🔍</span> <a href="https://github.com/theme-next/hexo-generator-searchdb">hexo-generator-searchdb</a></p>
+<p><span class="github-emoji" data-alias="mag" style data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png?v8">🔍</span> <a href="https://busuanzi.ibruce.info/">busuanzi</a></p>
 ]]></content>
       <categories>
         <category>Life</category>

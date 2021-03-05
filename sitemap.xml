@@ -4,21 +4,21 @@
   <url>
     <loc>https://zuoanzoom.github.io/2021/03/04/Linux-%E6%8E%A8%E8%8D%90%E8%BD%AF%E4%BB%B6%E7%9B%AE%E5%BD%95/</loc>
     
-    <lastmod>2021-03-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zuoanzoom.github.io/2021/03/04/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/</loc>
-    
-    <lastmod>2021-03-04</lastmod>
+    <lastmod>2021-03-05</lastmod>
     
   </url>
   
   <url>
     <loc>https://zuoanzoom.github.io/2021/03/04/hello-world/</loc>
     
-    <lastmod>2021-03-04</lastmod>
+    <lastmod>2021-03-05</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zuoanzoom.github.io/2021/03/04/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/</loc>
+    
+    <lastmod>2021-03-05</lastmod>
     
   </url>
   
@@ -53,14 +53,21 @@
 
   
   <url>
-    <loc>https://zuoanzoom.github.io/tags/Intro/</loc>
+    <loc>https://zuoanzoom.github.io/tags/Linux/</loc>
     <lastmod>2021-03-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://zuoanzoom.github.io/tags/Linux/</loc>
+    <loc>https://zuoanzoom.github.io/tags/Software/</loc>
+    <lastmod>2021-03-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zuoanzoom.github.io/tags/Intro/</loc>
     <lastmod>2021-03-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -83,14 +90,14 @@
 
   
   <url>
-    <loc>https://zuoanzoom.github.io/categories/Life/</loc>
+    <loc>https://zuoanzoom.github.io/categories/Software/</loc>
     <lastmod>2021-03-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://zuoanzoom.github.io/categories/Software/</loc>
+    <loc>https://zuoanzoom.github.io/categories/Life/</loc>
     <lastmod>2021-03-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
