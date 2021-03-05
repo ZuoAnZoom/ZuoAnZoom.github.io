@@ -53,20 +53,6 @@
 
   
   <url>
-    <loc>https://zuoanzoom.github.io/tags/Linux/</loc>
-    <lastmod>2021-03-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zuoanzoom.github.io/tags/Software/</loc>
-    <lastmod>2021-03-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://zuoanzoom.github.io/tags/Intro/</loc>
     <lastmod>2021-03-05</lastmod>
     <changefreq>daily</changefreq>
@@ -87,17 +73,31 @@
     <priority>0.6</priority>
   </url>
   
-
-  
   <url>
-    <loc>https://zuoanzoom.github.io/categories/Software/</loc>
+    <loc>https://zuoanzoom.github.io/tags/Linux/</loc>
     <lastmod>2021-03-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
+    <loc>https://zuoanzoom.github.io/tags/Software/</loc>
+    <lastmod>2021-03-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  
+  <url>
     <loc>https://zuoanzoom.github.io/categories/Life/</loc>
+    <lastmod>2021-03-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zuoanzoom.github.io/categories/Software/</loc>
     <lastmod>2021-03-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
