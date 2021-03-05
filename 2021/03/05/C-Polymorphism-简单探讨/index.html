@@ -27,21 +27,21 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"zuoanzoom.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":true,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="欢迎来到我的博客 🎉 祝各位都能找到需要的东西 💡 另外，胃口超棒 😄">
+<meta name="description" content="关于 C++ 中多态 Polymorphism 的实现，我们都知道要通过虚函数 virtual function。记得我第一次接触多态的例程的时候，在父类 Base Class 中，并没有在需要子类 Derived Class 重定义的函数前声明 virtual，不过即便如此，也一样实现了多态。后来，我学习到 virtual function 的时候才发现，奇怪，不使用 virtual 也可以在子">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://zuoanzoom.github.io/2021/03/04/hello-world/index.html">
+<meta property="og:title" content="C++ Polymorphism 简单探讨">
+<meta property="og:url" content="https://zuoanzoom.github.io/2021/03/05/C-Polymorphism-%E7%AE%80%E5%8D%95%E6%8E%A2%E8%AE%A8/index.html">
 <meta property="og:site_name" content="CSY&#39;s Blog">
-<meta property="og:description" content="欢迎来到我的博客 🎉 祝各位都能找到需要的东西 💡 另外，胃口超棒 😄">
+<meta property="og:description" content="关于 C++ 中多态 Polymorphism 的实现，我们都知道要通过虚函数 virtual function。记得我第一次接触多态的例程的时候，在父类 Base Class 中，并没有在需要子类 Derived Class 重定义的函数前声明 virtual，不过即便如此，也一样实现了多态。后来，我学习到 virtual function 的时候才发现，奇怪，不使用 virtual 也可以在子">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-03-04T09:43:44.000Z">
-<meta property="article:modified_time" content="2021-03-05T02:46:14.950Z">
+<meta property="article:published_time" content="2021-03-05T10:15:21.000Z">
+<meta property="article:modified_time" content="2021-03-05T11:25:21.421Z">
 <meta property="article:author" content="崔善尧">
-<meta property="article:tag" content="Intro">
+<meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://zuoanzoom.github.io/2021/03/04/hello-world/">
+<link rel="canonical" href="https://zuoanzoom.github.io/2021/03/05/C-Polymorphism-%E7%AE%80%E5%8D%95%E6%8E%A2%E8%AE%A8/">
 
 
 <script class="page-configurations">
@@ -53,7 +53,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>Hello World | CSY's Blog</title>
+<title>C++ Polymorphism 简单探讨 | CSY's Blog</title>
   
 
 
@@ -180,7 +180,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -193,6 +193,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%A8%E8%AE%BA-1"><span class="nav-number">1.</span> <span class="nav-text">讨论 1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%A8%E8%AE%BA-2"><span class="nav-number">2.</span> <span class="nav-text">讨论 2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%A8%E8%AE%BA-3"><span class="nav-number">3.</span> <span class="nav-text">讨论 3</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -285,7 +286,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zuoanzoom.github.io/2021/03/04/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://zuoanzoom.github.io/2021/03/05/C-Polymorphism-%E7%AE%80%E5%8D%95%E6%8E%A2%E8%AE%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/Me.jpg">
@@ -298,39 +299,33 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hello World
+          C++ Polymorphism 简单探讨
         </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
 
   
-    <i class="fa fa-thumb-tack"></i>
-    <font color="RED">置顶</font>
-    <span class="post-meta-divider"></span>
-  
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-03-04 17:43:44" itemprop="dateCreated datePublished" datetime="2021-03-04T17:43:44+08:00">2021-03-04</time>
+      <time title="创建时间：2021-03-05 18:15:21 / 修改时间：19:25:21" itemprop="dateCreated datePublished" datetime="2021-03-05T18:15:21+08:00">2021-03-05</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-05 10:46:14" itemprop="dateModified" datetime="2021-03-05T10:46:14+08:00">2021-03-05</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a>
+          <a href="/categories/Program/" itemprop="url" rel="index"><span itemprop="name">程序</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Program/C/" itemprop="url" rel="index"><span itemprop="name">C++</span></a>
         </span>
     </span>
 
@@ -347,14 +342,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>33</span>
+      <span>2.9k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>3 分钟</span>
     </span>
 </div>
 
@@ -365,10 +360,37 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>欢迎来到我的博客 <span class="github-emoji" data-alias="tada" style data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8">🎉</span></p>
-<p>祝各位都能找到需要的东西 <span class="github-emoji" data-alias="bulb" style data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4a1.png?v8">💡</span></p>
-<p>另外，胃口超棒 <span class="github-emoji" data-alias="smile" style data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">😄</span></p>
-<span id="more"></span>
+        <p>关于 C++ 中多态 Polymorphism 的实现，我们都知道要通过虚函数 virtual function。记得我第一次接触多态的例程的时候，在父类 Base Class 中，并没有在需要子类 Derived Class 重定义的函数前声明 virtual，不过即便如此，也一样实现了多态。后来，我学习到 virtual function 的时候才发现，奇怪，不使用 virtual 也可以在子类中对函数进行重定义，那么 virtual 函数的不同在哪里呢？</p>
+<h1 id="讨论-1">讨论 1</h1>
+<blockquote>
+<p><strong>C++ 的 non-virtual 函数可以重定义，那么 virtual 函数相比 non-virtual 函数有什么不一样？</strong></p>
+</blockquote>
+<div class="note info"><p>结论：虚函数能让你在仅用一个指针进行调用时，确保访问到希望访问的方法，而非虚函数不行。</p>
+</div>
+<p>见如下代码：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">animalSound</span><span class="params">()</span> </span>&#123; <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;__Animal_make_a_sound__&quot;</span> &lt;&lt; <span class="built_in">endl</span>; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Pig</span> :</span> <span class="keyword">public</span> Animal &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">animalSound</span><span class="params">()</span> </span>&#123; <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;__Pig_make_a_sound__&quot;</span> &lt;&lt; <span class="built_in">endl</span>; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span> :</span> <span class="keyword">public</span> Animal &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">animalSound</span><span class="params">()</span> </span>&#123; <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;__Dog_make_a_sound__&quot;</span> &lt;&lt; <span class="built_in">endl</span>; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> **argv)</span> </span>&#123;</span><br><span class="line">    Animal _Animal;</span><br><span class="line">    Pig _pig;</span><br><span class="line">    Dog _dog;</span><br><span class="line">    _Animal.animalSound();  <span class="comment">//__Animal_make_a_sound__</span></span><br><span class="line">    _pig.animalSound();     <span class="comment">//__Pig_make_a_sound__</span></span><br><span class="line">    _dog.animalSound();     <span class="comment">//__Dog_make_a_sound__</span></span><br><span class="line"></span><br><span class="line">    Pig *pp = <span class="keyword">new</span> Pig();</span><br><span class="line">    Animal *pa = pp;</span><br><span class="line">    pa-&gt;animalSound();      <span class="comment">//__Animal_make_a_sound__</span></span><br><span class="line">    pp-&gt;animalSound();      <span class="comment">//__Pig_make_a_sound__</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">vector</span>&lt;Animal *&gt; voa;</span><br><span class="line">    voa.push_back(<span class="keyword">new</span> Pig());</span><br><span class="line">    voa.push_back(<span class="keyword">new</span> Dog());</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> x: voa) &#123;</span><br><span class="line">        x-&gt;animalSound();   <span class="comment">//__Animal_make_a_sound__</span></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;	    <span class="comment">//__Animal_make_a_sound__</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面的例子中，基类的函数前并没有加 virtual。从输出结果可以看出，pa 指向 Pig 时候，并没有访问到 Pig 的方法。同样下面存放指针的 voa 容器也没有访问到正确的方法。</p>
+<p>当我们把代码改成如下（基类成员函数前加 virtual）：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">animalSound</span><span class="params">()</span> </span>&#123; <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;__Animal_make_a_sound__&quot;</span> &lt;&lt; <span class="built_in">endl</span>; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Pig</span> :</span> <span class="keyword">public</span> Animal &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">animalSound</span><span class="params">()</span> </span>&#123; <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;__Pig_make_a_sound__&quot;</span> &lt;&lt; <span class="built_in">endl</span>; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span> :</span> <span class="keyword">public</span> Animal &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">animalSound</span><span class="params">()</span> </span>&#123; <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;__Dog_make_a_sound__&quot;</span> &lt;&lt; <span class="built_in">endl</span>; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> **argv)</span> </span>&#123;</span><br><span class="line">    Animal _Animal;</span><br><span class="line">    Pig _pig;</span><br><span class="line">    Dog _dog;</span><br><span class="line">    _Animal.animalSound();  <span class="comment">//__Animal_make_a_sound__</span></span><br><span class="line">    _pig.animalSound();     <span class="comment">//__Pig_make_a_sound__</span></span><br><span class="line">    _dog.animalSound();     <span class="comment">//__Dog_make_a_sound__</span></span><br><span class="line"></span><br><span class="line">    Pig *pp = <span class="keyword">new</span> Pig();</span><br><span class="line">    Animal *pa = pp;</span><br><span class="line">    pa-&gt;animalSound();      <span class="comment">//__Pig_make_a_sound__</span></span><br><span class="line">    pp-&gt;animalSound();      <span class="comment">//__Pig_make_a_sound__</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">vector</span>&lt;Animal *&gt; voa;</span><br><span class="line">    voa.push_back(<span class="keyword">new</span> Pig());</span><br><span class="line">    voa.push_back(<span class="keyword">new</span> Dog());</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> x: voa) &#123;</span><br><span class="line">        x-&gt;animalSound();   <span class="comment">//__Pig_make_a_sound__</span></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;       <span class="comment">//__Dog_make_a_sound__</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>由此，结论显而易见。不过需要注意的是，这个例子中，我并没有写析构函数 dtor，如果（在 Animal 中）写出则必须为 virtual。</p>
+<h1 id="讨论-2">讨论 2</h1>
+<blockquote>
+<p>什么情况下使用 virtual ？或者说，有什么使用建议？</p>
+</blockquote>
+<div class="note info"><ul>
+<li>某类作为父类，其派生类需要对函数进行重定义 override，要对需要重定义的函数前加 virtual。</li>
+<li>某类存在派生，那么它的析构函数 dtor 必须是 virtual 的，否则可能导致资源泄露。</li>
+<li>non-virtual 函数可以确保当你使用父类指针时，一定能调用父类的方法（上述例子）。</li>
+</ul>
+</div>
+<p>另外，virtual 函数调用要通过虚表 virtual table 找到对应的函数指针，而 non-virtual 函数在编译的时候就已经确定了调用函数的地址。所以，调用函数的效率上 non-virtual 函数高一些。</p>
+<h1 id="讨论-3">讨论 3</h1>
+<p><strong>总结：</strong></p>
+<ul>
+<li>virtual 可以实现多态，这是我们都知道的。</li>
+<li>non-virtual 也可以实现多态特性，但是在进行指针调用时候无法访问到子类的正确方法上，这一点需要注意。</li>
+<li>所以，养成好习惯，父类需要重定义 override 的函数，就加上 virtual。</li>
+</ul>
 
     </div>
 
@@ -386,7 +408,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://zuoanzoom.github.io/2021/03/04/hello-world/" title="Hello World">https://zuoanzoom.github.io/2021/03/04/hello-world/</a>
+      <a href="https://zuoanzoom.github.io/2021/03/05/C-Polymorphism-%E7%AE%80%E5%8D%95%E6%8E%A2%E8%AE%A8/" title="C++ Polymorphism 简单探讨">https://zuoanzoom.github.io/2021/03/05/C-Polymorphism-简单探讨/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -395,18 +417,18 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/Intro/" rel="tag"># Intro</a>
+              <a href="/tags/C/" rel="tag"># C++</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/2021/03/04/Linux-%E6%8E%A8%E8%8D%90%E8%BD%AF%E4%BB%B6%E7%9B%AE%E5%BD%95/" rel="prev" title="Linux 推荐软件目录[长期更新]">
+                  <i class="fa fa-chevron-left"></i> Linux 推荐软件目录[长期更新]
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/03/04/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/" rel="next" title="我的博客[持续更新]">
-                  我的博客[持续更新] <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -547,7 +569,7 @@ NexT.utils.loadComments('.gitalk-container', () => {
       repo        : 'BlogComments',
       owner       : 'ZuoAnZoom',
       admin       : ['ZuoAnZoom'],
-      id          : '78d689c0afc5c2dfd7f33e9dd86a1806',
+      id          : '573bd8b2e8f6dc8227ae2be14367eecd',
       proxy       : 'https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token',
         language: '',
       distractionFreeMode: true
