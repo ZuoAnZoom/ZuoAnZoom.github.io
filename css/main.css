@@ -181,7 +181,7 @@ body {
 body {
   background: var(--body-bg-color);
   color: var(--text-color);
-  font-family: Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: Roboto Slab,Noto Sans SC, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 1em;
   line-height: 2;
   min-height: 100%;
@@ -194,7 +194,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Noto Sans SC, Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: Roboto Slab,Noto Sans SC, Roboto Slab,Noto Sans SC, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-weight: bold;
   line-height: 1.5;
   margin: 20px 0 15px;
@@ -1237,7 +1237,7 @@ pre code {
   color: var(--brand-hover-color);
 }
 .site-title {
-  font-family: Noto Sans SC, Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: Roboto Slab,Noto Sans SC, Roboto Slab,Noto Sans SC, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 1.375em;
   font-weight: normal;
   margin: 0;
@@ -1841,15 +1841,6 @@ pre code {
   width: 100%;
   z-index: 1500;
 }
-.reading-progress-bar {
-  background: #37c6c0;
-  height: 3px;
-  left: 0;
-  position: fixed;
-  width: 0;
-  z-index: 1500;
-  bottom: 0;
-}
 .rtl.post-body p,
 .rtl.post-body a,
 .rtl.post-body h1,
@@ -1988,7 +1979,7 @@ pre code {
   width: 4px;
 }
 .post-body {
-  font-family: Noto Sans SC, Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: Noto Sans SC, Roboto Slab,Noto Sans SC, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   overflow-wrap: break-word;
 }
 @media (min-width: 1200px) {
@@ -2182,7 +2173,7 @@ pre code {
 }
 .posts-expand .post-meta-container {
   color: #999;
-  font-family: Noto Sans SC, Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: Noto Sans SC, Roboto Slab,Noto Sans SC, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 0.75em;
   margin-top: 3px;
 }
