@@ -2,7 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://zuoanzoom.github.io/C-%E5%B8%B8%E8%A7%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
+    <loc>https://zuoanzoom.github.io/2021/210305-a/</loc>
+    
+    <lastmod>2021-03-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zuoanzoom.github.io/2021/210308-a/</loc>
+    
+    <lastmod>2021-03-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zuoanzoom.github.io/2021/210304-c/</loc>
+    
+    <lastmod>2021-03-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zuoanzoom.github.io/2021/210304-b/</loc>
+    
+    <lastmod>2021-03-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zuoanzoom.github.io/2021/210304-a/</loc>
+    
+    <lastmod>2021-03-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zuoanzoom.github.io/2021/210306-a/</loc>
     
     <lastmod>2021-03-08</lastmod>
     
@@ -12,41 +47,6 @@
     <loc>https://zuoanzoom.github.io/about/index.html</loc>
     
     <lastmod>2021-03-08</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zuoanzoom.github.io/Linux-%E6%8E%A8%E8%8D%90%E8%BD%AF%E4%BB%B6%E7%9B%AE%E5%BD%95/</loc>
-    
-    <lastmod>2021-03-08</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zuoanzoom.github.io/hello-world/</loc>
-    
-    <lastmod>2021-03-06</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zuoanzoom.github.io/C-Polymorphism-%E7%AE%80%E5%8D%95%E6%8E%A2%E8%AE%A8/</loc>
-    
-    <lastmod>2021-03-06</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zuoanzoom.github.io/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/</loc>
-    
-    <lastmod>2021-03-06</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zuoanzoom.github.io/C-inline-%E7%AE%80%E5%8D%95%E6%8E%A2%E8%AE%A8/</loc>
-    
-    <lastmod>2021-03-06</lastmod>
     
   </url>
   

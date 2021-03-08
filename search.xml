@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Hello World</title>
-    <url>/hello-world/</url>
+    <url>/2021/210304-a/</url>
     <content><![CDATA[<p>欢迎来到我的博客 <span class="github-emoji" data-alias="tada" style="" data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8">🎉</span></p>
 <p>祝各位都能找到需要的东西 <span class="github-emoji" data-alias="bulb" style="" data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4a1.png?v8">💡</span></p>
 <p>另外，祝胃口超棒 <span class="github-emoji" data-alias="smile" style="" data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">😄</span></p>
@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <title>C++ 常见设计模式</title>
-    <url>/C-%E5%B8%B8%E8%A7%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</url>
+    <url>/2021/210308-a/</url>
     <content><![CDATA[<p>最近看了侯老师的一些课程，里面谈到了一些设计模式，这里做一下记录。</p>
 <span id="more"></span>
 <h1 id="singleton">Singleton</h1>
@@ -79,7 +79,7 @@
   </entry>
   <entry>
     <title>C++ inline 简单探讨</title>
-    <url>/C-inline-%E7%AE%80%E5%8D%95%E6%8E%A2%E8%AE%A8/</url>
+    <url>/2021/210306-a/</url>
     <content><![CDATA[<p>前段时间在写代码的时候，发现了关于内联 inline 的一些细节，挑重要的放在这里，做一个集中记录。</p>
 <p><span class="github-emoji" data-alias="star2" style="" data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f31f.png?v8">🌟</span> 以下总结使用 inline 的一些注意事项，均针对多文件 C++ 工程：</p>
 <span id="more"></span>
@@ -103,7 +103,7 @@
   </entry>
   <entry>
     <title>C++ Polymorphism 简单探讨</title>
-    <url>/C-Polymorphism-%E7%AE%80%E5%8D%95%E6%8E%A2%E8%AE%A8/</url>
+    <url>/2021/210305-a/</url>
     <content><![CDATA[<p>关于 C++ 中多态 Polymorphism 的实现，我们都知道要通过虚函数 virtual function。记得我第一次接触多态的例程的时候，在父类 Base Class 中，并没有在需要子类 Derived Class 重定义的函数前声明 virtual，不过即便如此，也一样实现了多态。后来，我学习到 virtual function 的时候才发现，奇怪，不使用 virtual 也可以在子类中对函数进行重定义，那么 virtual 函数的不同在哪里呢？</p>
 <span id="more"></span>
 <h1 id="讨论-1">讨论 1</h1>
@@ -145,7 +145,7 @@
   </entry>
   <entry>
     <title>Linux 推荐软件目录[长期更新]</title>
-    <url>/Linux-%E6%8E%A8%E8%8D%90%E8%BD%AF%E4%BB%B6%E7%9B%AE%E5%BD%95/</url>
+    <url>/2021/210304-c/</url>
     <content><![CDATA[<p><span class="github-emoji" data-alias="star2" style="" data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f31f.png?v8">🌟</span> 主要精选 Linux 下的一些发行版、软件及通用字体等。都是我曾经和现在使用过及正在使用的，均不做过多介绍，感兴趣的可以自己填坑，这样有助于个人提高。</p>
 <h1 id="linux-distro">Linux Distro</h1>
 <ol type="1">
@@ -201,12 +201,13 @@
   </entry>
   <entry>
     <title>我的博客[持续更新]</title>
-    <url>/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/</url>
+    <url>/2021/210304-b/</url>
     <content><![CDATA[<p>我的博客中所用的技术等其他关于本博客的说明内容。</p>
 <h1 id="文章列表">文章列表</h1>
+<p><a href="https://zuoanzoom.github.io/C-%E5%B8%B8%E8%A7%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">C++ 常见设计模式</a></p>
 <p><a href="https://zuoanzoom.github.io/2021/03/06/C-inline-%E7%AE%80%E5%8D%95%E6%8E%A2%E8%AE%A8/">C++ inline 简单探讨</a></p>
 <p><a href="https://zuoanzoom.github.io/2021/03/05/C-Polymorphism-%E7%AE%80%E5%8D%95%E6%8E%A2%E8%AE%A8/">C++ Polymorphism 简单探讨</a></p>
-<p><a href="https://zuoanzoom.github.io/2021/03/04/Linux-%E6%8E%A8%E8%8D%90%E8%BD%AF%E4%BB%B6%E7%9B%AE%E5%BD%95/">Linux-推荐软件目录</a></p>
+<p><a href="https://zuoanzoom.github.io/2021/03/04/Linux-%E6%8E%A8%E8%8D%90%E8%BD%AF%E4%BB%B6%E7%9B%AE%E5%BD%95/">Linux 推荐软件目录</a></p>
 <p><a href="https://zuoanzoom.github.io/2021/03/04/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/">我的博客</a></p>
 <p><a href="https://zuoanzoom.github.io/2021/03/04/hello-world/">Hello World</a></p>
 <span id="more"></span>
