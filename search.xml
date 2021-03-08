@@ -157,6 +157,8 @@
 <h1 id="fonts">Fonts</h1>
 <ol type="1">
 <li><a href="https://github.com/tonsky/FiraCode">Fira Code</a></li>
+<li><a href="https://fonts.google.com/specimen/Noto+Serif+SC?preview.text_type=custom">Noto Serif SC</a></li>
+<li><a href="https://fonts.google.com/specimen/Roboto+Slab?preview.text_type=custom">Roboto Slab</a></li>
 </ol>
 <h1 id="terminal-emulator">Terminal emulator</h1>
 <ol type="1">
@@ -168,6 +170,8 @@
 <li><a href="https://www.vim.org/">Vim</a></li>
 <li><a href="https://www.sublimetext.com/">Sublime</a></li>
 <li><a href="https://code.visualstudio.com/">VSCode</a></li>
+<li><a href="https://typora.io/">Typora</a></li>
+<li><a href="https://atom.io/">Atom</a></li>
 </ol>
 <h1 id="tools-required">Tools REQUIRED</h1>
 <ol type="1">
@@ -177,7 +181,12 @@
 <li><a href="https://github.com/davatorium/rofi">Rofi</a></li>
 <li><a href="https://github.com/brndnmtthws/conky">Conky</a></li>
 <li><a href="https://github.com/TheAssassin/AppImageLauncher">AppImageLauncher</a></li>
-<li><a href="https://www.syntevo.com/smartgit/">SmartGit</a></li>
+<li><a href="https://github.com/flameshot-org/flameshot">flameshot</a></li>
+<li><a href="https://peazip.github.io/">peazip</a></li>
+<li><a href="https://obsproject.com/">OBS Studio</a></li>
+<li><a href="https://filezilla-project.org/">FileZilla</a></li>
+<li><a href="https://htop.dev/">htop</a></li>
+<li><a href="https://wiki.emacinc.com/wiki/Getting_Started_With_Minicom">minicom</a></li>
 </ol>
 <h1 id="window-manager">Window Manager</h1>
 <ol type="1">
@@ -187,8 +196,43 @@
 </ol>
 <h1 id="take-notes">Take Notes</h1>
 <ol type="1">
-<li><p><a href="https://github.com/vnotex/vnote/releases">VNote-2.10</a>: 少Qt库，会导致 Fcitx 输入法无法使用，需要拆包加库重组，见<a href="https://github.com/vnotex/vnote/issues/1505#issuecomment-726603598">#1505 (comment)</a></p></li>
-<li><p><a href="https://launchpad.net/~umang/+archive/ubuntu/indicator-stickynotes">indicator-stickynotes</a></p></li>
+<li><a href="https://github.com/vnotex/vnote/releases">VNote-2.10</a>: 少Qt库，会导致 Fcitx 输入法无法使用，需要拆包加库重组，见<a href="https://github.com/vnotex/vnote/issues/1505#issuecomment-726603598">#1505 (comment)</a></li>
+<li><a href="https://launchpad.net/~umang/+archive/ubuntu/indicator-stickynotes">indicator-stickynotes</a></li>
+<li><a href="https://obsidian.md/">Obsidian</a></li>
+</ol>
+<h1 id="dev-ide">Dev IDE</h1>
+<ol type="1">
+<li><a href="https://www.jetbrains.com/clion/">CLion</a></li>
+<li><a href="https://www.jetbrains.com/pycharm/">PyCharm</a></li>
+<li><a href="https://www.qt.io/product/development-tools">QtCreator</a></li>
+</ol>
+<h1 id="dev-tools">Dev Tools</h1>
+<ol type="1">
+<li><a href="https://www.syntevo.com/smartgit/">SmartGit</a></li>
+<li><a href="https://meldmerge.org/">Meld</a></li>
+<li><a href="https://dbeaver.io/">DBeaver</a></li>
+<li><a href="https://www.sourcetrail.com/">Sourcetrail</a></li>
+<li><a href="https://www.wireshark.org/">Wireshark</a></li>
+</ol>
+<h1 id="文档书籍管理">文档书籍管理</h1>
+<ol type="1">
+<li><a href="https://www.zotero.org/">Zotero</a></li>
+<li><a href="https://calibre-ebook.com/">Calibre</a></li>
+</ol>
+<h1 id="remote-desktop">Remote Desktop</h1>
+<ol type="1">
+<li><a href="https://www.nomachine.com/">NoMachine</a></li>
+<li><a href="https://parsec.app/">Parsec</a></li>
+</ol>
+<h1 id="android-sim">Android Sim</h1>
+<ol type="1">
+<li><a href="https://www.linzhuotech.com/Product/download">xDroid</a></li>
+</ol>
+<h1 id="file-sync">File Sync</h1>
+<ol type="1">
+<li><a href="https://syncthing.net/">Syncthing</a></li>
+<li><a href="https://www.jianguoyun.com/">坚果云</a></li>
+<li><a href="https://freefilesync.org/">FreeFileSync</a></li>
 </ol>
 ]]></content>
       <categories>
@@ -204,12 +248,12 @@
     <url>/2021/210304-b/</url>
     <content><![CDATA[<p>我的博客中所用的技术等其他关于本博客的说明内容。</p>
 <h1 id="文章列表">文章列表</h1>
-<p><a href="https://zuoanzoom.github.io/C-%E5%B8%B8%E8%A7%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">C++ 常见设计模式</a></p>
-<p><a href="https://zuoanzoom.github.io/2021/03/06/C-inline-%E7%AE%80%E5%8D%95%E6%8E%A2%E8%AE%A8/">C++ inline 简单探讨</a></p>
-<p><a href="https://zuoanzoom.github.io/2021/03/05/C-Polymorphism-%E7%AE%80%E5%8D%95%E6%8E%A2%E8%AE%A8/">C++ Polymorphism 简单探讨</a></p>
-<p><a href="https://zuoanzoom.github.io/2021/03/04/Linux-%E6%8E%A8%E8%8D%90%E8%BD%AF%E4%BB%B6%E7%9B%AE%E5%BD%95/">Linux 推荐软件目录</a></p>
-<p><a href="https://zuoanzoom.github.io/2021/03/04/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/">我的博客</a></p>
-<p><a href="https://zuoanzoom.github.io/2021/03/04/hello-world/">Hello World</a></p>
+<p><a href="https://zuoanzoom.github.io/2021/210308-a/">C++ 常见设计模式</a></p>
+<p><a href="https://zuoanzoom.github.io/2021/210306-a/">C++ inline 简单探讨</a></p>
+<p><a href="https://zuoanzoom.github.io/2021/210305-a/">C++ Polymorphism 简单探讨</a></p>
+<p><a href="https://zuoanzoom.github.io/2021/210304-c/">Linux 推荐软件目录</a></p>
+<p><a href="https://zuoanzoom.github.io/2021/210304-b/">我的博客</a></p>
+<p><a href="https://zuoanzoom.github.io/2021/210304-a/">Hello World</a></p>
 <span id="more"></span>
 <h1 id="博客-tech">博客 Tech</h1>
 <p><em><font color=gray>基础建站：</font></em></p>
