@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zuoanzoom.github.io/2021/210308-b/</loc>
+    
+    <lastmod>2021-03-08</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://zuoanzoom.github.io/2021/210304-b/</loc>
     
     <lastmod>2021-03-08</lastmod>
@@ -88,6 +95,13 @@
   </url>
   
   <url>
+    <loc>https://zuoanzoom.github.io/tags/jetson/</loc>
+    <lastmod>2021-03-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zuoanzoom.github.io/tags/linux/</loc>
     <lastmod>2021-03-08</lastmod>
     <changefreq>daily</changefreq>
@@ -132,7 +146,7 @@
   </url>
   
   <url>
-    <loc>https://zuoanzoom.github.io/categories/software/</loc>
+    <loc>https://zuoanzoom.github.io/categories/embedded/</loc>
     <lastmod>2021-03-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -140,6 +154,13 @@
   
   <url>
     <loc>https://zuoanzoom.github.io/categories/program/cpp/</loc>
+    <lastmod>2021-03-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zuoanzoom.github.io/categories/software/</loc>
     <lastmod>2021-03-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

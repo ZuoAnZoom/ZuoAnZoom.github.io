@@ -16,6 +16,37 @@
       </tags>
   </entry>
   <entry>
+    <title>Jetson Nano 上手配置</title>
+    <url>/2021/210308-b/</url>
+    <content><![CDATA[<p>关于 Nvidia Jetson Nano 初次上手的一些配置。</p>
+<p>这篇文章写的比较久了，如果有问题请留言。</p>
+<span id="more"></span>
+<h1 id="使用-jtop">使用 jtop</h1>
+<p>Jetson Xavier 也可以使用 jtop 哦。</p>
+<p>安装 <code>sudo -H pip3 install -U jetson-stats</code></p>
+<p>启动 <code>sudo jtop</code></p>
+<p>在 jtop 里面可以查看板子的各个信息，如 CPU、GPU、内存、硬盘占用，还可以修改板子的很多参数，主要包括功率、风扇转速等，可以自行摸索一下。</p>
+<h1 id="手动调节风扇转速">手动调节风扇转速</h1>
+<p>脚本如下，可以修改 <code>echo</code> 后面的值，从 <code>0</code> 到 <code>100</code>。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env bash</span></span><br><span class="line">sudo sh -c <span class="string">&#x27;echo 100 &gt; /sys/devices/pwm-fan/target_pwm&#x27;</span></span><br><span class="line"><span class="built_in">exit</span> 0</span><br></pre></td></tr></table></figure>
+<h1 id="一些手动功率配置指令">一些手动功率配置指令</h1>
+<p>5w模式：<code>sudo /usr/sbin/nvpmodel -m 1</code></p>
+<p>10w模式（最大功率）：<code>sudo /usr/sbin/nvpmodel -m 0</code></p>
+<p>查看功率模式：<code>sudo /usr/sbin/nvpmodel -q</code></p>
+<p>设置完后运行：<code>sudo /usr/bin/jetson_clocks</code></p>
+<p>查看处理器状态：<code>sudo jetson_clocks --show</code></p>
+<p>开启static MAX模式，4核心全部开启：<code>sudo jetson_clocks</code></p>
+<h1 id="配置远程桌面">配置远程桌面</h1>
+<p>对于这么可爱的板子，好像没有个远程桌面怎么也说不过去。不要再去网上看什么其他的教程了，直接去 <span class="github-emoji" data-alias="mag" style="" data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png?v8">🔍</span> <a href="https://www.nomachine.com/">NoMachine</a> 官网下载安装（上位机也要装）对应版本的就可以远程了哦，效果比 VNC、xrdp 都要好的多。</p>
+]]></content>
+      <categories>
+        <category>嵌入式</category>
+      </categories>
+      <tags>
+        <tag>Jetson</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++ 常见设计模式</title>
     <url>/2021/210308-a/</url>
     <content><![CDATA[<p>最近看了侯老师的一些课程，里面谈到了一些设计模式，这里做一下记录。</p>
@@ -248,6 +279,7 @@
     <url>/2021/210304-b/</url>
     <content><![CDATA[<p>我的博客中所用的技术等其他关于本博客的说明内容。</p>
 <h1 id="文章列表">文章列表</h1>
+<p><a href="https://zuoanzoom.github.io/2021/210308-b/">Jetson Nano 上手配置</a></p>
 <p><a href="https://zuoanzoom.github.io/2021/210308-a/">C++ 常见设计模式</a></p>
 <p><a href="https://zuoanzoom.github.io/2021/210306-a/">C++ inline 简单探讨</a></p>
 <p><a href="https://zuoanzoom.github.io/2021/210305-a/">C++ Polymorphism 简单探讨</a></p>
