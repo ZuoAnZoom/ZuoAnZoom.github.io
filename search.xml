@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Hello World</title>
-    <url>/2021/03/04/hello-world/</url>
+    <url>/hello-world/</url>
     <content><![CDATA[<p>欢迎来到我的博客 <span class="github-emoji" data-alias="tada" style="" data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8">🎉</span></p>
 <p>祝各位都能找到需要的东西 <span class="github-emoji" data-alias="bulb" style="" data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4a1.png?v8">💡</span></p>
 <p>另外，祝胃口超棒 <span class="github-emoji" data-alias="smile" style="" data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">😄</span></p>
@@ -16,8 +16,70 @@
       </tags>
   </entry>
   <entry>
+    <title>C++ 常见设计模式</title>
+    <url>/C-%E5%B8%B8%E8%A7%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</url>
+    <content><![CDATA[<p>最近看了侯老师的一些课程，里面谈到了一些设计模式，这里做一下记录。</p>
+<span id="more"></span>
+<h1 id="singleton">Singleton</h1>
+<p>当我们写的 class，只希望产生一个对象的时候，就需要如下图方式来设计，这是一种叫做 Singleton 的设计模式，是一种非常好的做法。</p>
+<p><img data-src="https://s3.ax1x.com/2021/03/08/6lNXIx.png" alt="" width=80% align=center/></p>
+<p>但是上图的写法还有一点点缺陷。当外界没有人使用 A 的时候，依然有一个 A 存在。</p>
+<p>下图则是一种更好的做法，区别在于，把静态的自己放到对外的唯一接口中，当有人调用这个唯一接口的时候，就会存在一个静态的自己，并且只有一个存在。</p>
+<p><img data-src="https://s3.ax1x.com/2021/03/08/6lUUlF.png" alt="" width=80% align=center/></p>
+<h1 id="adapter">Adapter</h1>
+<p>如下图，deque 的功能很强大，于是拿出其中的一部分功能，打包一下变成 queue，且 queue 的功能都可以由 deque 已有的函数完成，类似这样的就叫做 Adapter。</p>
+<p>下图表示 queue has-a deque，为 Composition 关系。</p>
+<p><img data-src="https://s3.ax1x.com/2021/03/08/6lU5TI.png" alt="" width=80% align=center/></p>
+<h1 id="handlebodypimpl">Handle/Body(pImpl)</h1>
+<p>Handle/Body 是委托 Delegation 的一个非常有名的手法，即为 pointer to implementation，也叫做编译防火墙，Handle 永远不用再编译，要编译的只是右边 Body。</p>
+<p>如下图，左边 String 就是提供给客户的接口，右边 StringRep 就是 String 的真正实现，这样做的好处就是，客户的接口永远不需要改变，我们可以弹性的改变右边的 String 的实现方式。</p>
+<p><img data-src="https://s3.ax1x.com/2021/03/08/6laQ1O.png" alt="" width=80% align=center/></p>
+<h1 id="template-method">Template Method</h1>
+<p>如下图，在父类 CDocument 中的一个函数 <code>OnFileOpen()</code> 中，打开文件中的很多操作都可以先写好，但是 <code>Serialize()</code> 读文件这个函数目前还无法确定，就可以把它延缓到写子类的时候来定义。这样当子类定义好这个函数，并且通过子类调用父类的 OnFileOpen() 函数的时候，当运行到 <code>Serialize()</code> 函数时，就会通过 this pointer 调用起子类对 <code>Serialize()</code> 的定义。这样的手法就叫做 Template Method。</p>
+<p><img data-src="https://s3.ax1x.com/2021/03/08/6labU1.png" alt="" width=80% align=center/> <img data-src="https://s3.ax1x.com/2021/03/08/6laOC6.png" alt="" width=80% align=center/></p>
+<p>在写应用程序框架 Application framework 的时候，会大量用到这种手法：先把固定能写好的写好，留下无法决定的函数让它成为一个虚函数，让你的子类去定义它。类似这样的产品很多，比如微软的 MFC。</p>
+<h1 id="observer">Observer</h1>
+<p>如下图，左边是有 4 个相同的 observer 在看同一份数据，右边是有 3 个不同的 observer 在看同一份数据。数据更新的时候，窗口的内容应当同步更新。</p>
+<p><img data-src="https://s3.ax1x.com/2021/03/08/6lBszV.png" alt="" width=80% align=center/></p>
+<p>如下的设计模式为 Observer</p>
+<p><img data-src="https://s3.ax1x.com/2021/03/08/6lBcsU.png" alt="" width=80% align=center/></p>
+<h1 id="composite">Composite</h1>
+<blockquote>
+<p>现在让你设计一个 FileSystem 文件系统，你该如何思考这个问题呢？ 文件系统里有文件和目录，目录里面可以放目录也可以放文件，目录也可以放到另外一个目录种去。我们要设计哪一些 class 才能把他们都关联起来呢？</p>
+</blockquote>
+<p>方法如下图：</p>
+<p><img data-src="https://s3.ax1x.com/2021/03/08/6lDokj.png" alt="" width=80% align=center/></p>
+<h1 id="prototype">Prototype</h1>
+<blockquote>
+<p>如果需要一个（树状）继承体系，需要创建未来才会出现的子类。怎么办？</p>
+</blockquote>
+<p>下图中的分隔线的上面就是抽象的部分。 比如我现在设计一个框架 Framework（分隔线上），分隔线下的子类是未来才会派生下去的，是被客户买回去后它才会派生子类，这个时候 class 名称才出现。我可能是3年前写的这一段，我并不知道未来的 class 名称是什么，所以我也不可能去创建它。那么可不可以让下面派生的子类都创建一个自己，当作原型 Prototype，让我有办法去看到你们创造出来的原型，这样我就可以复制它，就等于我在创建了。</p>
+<p><img data-src="https://s3.ax1x.com/2021/03/08/6lrP91.png" alt="" width=80% align=center/></p>
+<p>对于这类问题：我现在要去创建未来的 Class，Prototype 是一种解法。对于后面派生的子类，你们自己去创建一个出来，只要能被我框架这边看得到，我就可以拿到它，并当成一个蓝本然后 copy 很多份。</p>
+<blockquote>
+<p>有人说，那我把 <code>clone();</code> 函数写成静态 static 的，那么不是也可以调用的到吗？</p>
+</blockquote>
+<p>这是不行的，因为如果是静态的，调用函数需要写 class name，而我并不知道未来的 class name 是什么。</p>
+<blockquote>
+<p>为什么还要有一个 #LandSatImage(int) 放到 protected 里面呢？</p>
+</blockquote>
+<p>因为每次调用 <code>clone();</code> 的时候，都要 new，就会调用构造函数，而放在 private 里的构造函数是用来把自己的原型挂到框架端的，而框架端的空间是用来放原型 Prototype 的，只能放原来的那一个原型，不能再做一次了。所以，我们就再写一个构造函数，让现在这种情况去调用。那么是放在 protected 还是 public 呢？显然不能放在 public 区域，因为这些东西是不打算被外界创建的，所以要通过原型来创建。因此，它只能是 protected 或 private，都可以，只要互相可以区分开，这个例子为了区分就加了个 int 参数，其实根本用不到。</p>
+<p>总结上图：每一个子类，自己都有自己的一个个体，并通过构造函数，把自己的个体挂到上面的框架去，然后每一个子类都还有一个 <code>clone();</code> 函数，从而框架端能看到挂上去的自己的一个个的原型，得以通过原型来调用 <code>clone();</code> 函数，从而制造出一个或 n 个副本来。</p>
+<p>代码如下图：</p>
+<p><img data-src="https://s3.ax1x.com/2021/03/08/6lrq5d.png" alt="" width=80% align=center/> <img data-src="https://s3.ax1x.com/2021/03/08/6lrX8I.png" alt="" width=80% align=center/> <img data-src="https://s3.ax1x.com/2021/03/08/6lrvxP.png" alt="" width=80% align=center/></p>
+]]></content>
+      <categories>
+        <category>程序</category>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++ inline 简单探讨</title>
-    <url>/2021/03/06/C-inline-%E7%AE%80%E5%8D%95%E6%8E%A2%E8%AE%A8/</url>
+    <url>/C-inline-%E7%AE%80%E5%8D%95%E6%8E%A2%E8%AE%A8/</url>
     <content><![CDATA[<p>前段时间在写代码的时候，发现了关于内联 inline 的一些细节，挑重要的放在这里，做一个集中记录。</p>
 <p><span class="github-emoji" data-alias="star2" style="" data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f31f.png?v8">🌟</span> 以下总结使用 inline 的一些注意事项，均针对多文件 C++ 工程：</p>
 <span id="more"></span>
@@ -41,7 +103,7 @@
   </entry>
   <entry>
     <title>C++ Polymorphism 简单探讨</title>
-    <url>/2021/03/05/C-Polymorphism-%E7%AE%80%E5%8D%95%E6%8E%A2%E8%AE%A8/</url>
+    <url>/C-Polymorphism-%E7%AE%80%E5%8D%95%E6%8E%A2%E8%AE%A8/</url>
     <content><![CDATA[<p>关于 C++ 中多态 Polymorphism 的实现，我们都知道要通过虚函数 virtual function。记得我第一次接触多态的例程的时候，在父类 Base Class 中，并没有在需要子类 Derived Class 重定义的函数前声明 virtual，不过即便如此，也一样实现了多态。后来，我学习到 virtual function 的时候才发现，奇怪，不使用 virtual 也可以在子类中对函数进行重定义，那么 virtual 函数的不同在哪里呢？</p>
 <span id="more"></span>
 <h1 id="讨论-1">讨论 1</h1>
@@ -83,7 +145,7 @@
   </entry>
   <entry>
     <title>Linux 推荐软件目录[长期更新]</title>
-    <url>/2021/03/04/Linux-%E6%8E%A8%E8%8D%90%E8%BD%AF%E4%BB%B6%E7%9B%AE%E5%BD%95/</url>
+    <url>/Linux-%E6%8E%A8%E8%8D%90%E8%BD%AF%E4%BB%B6%E7%9B%AE%E5%BD%95/</url>
     <content><![CDATA[<p><span class="github-emoji" data-alias="star2" style="" data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f31f.png?v8">🌟</span> 主要精选 Linux 下的一些发行版、软件及通用字体等。都是我曾经和现在使用过及正在使用的，均不做过多介绍，感兴趣的可以自己填坑，这样有助于个人提高。</p>
 <h1 id="linux-distro">Linux Distro</h1>
 <ol type="1">
@@ -134,12 +196,12 @@
       </categories>
       <tags>
         <tag>Linux</tag>
-        <tag>Software</tag>
+        <tag>软件</tag>
       </tags>
   </entry>
   <entry>
     <title>我的博客[持续更新]</title>
-    <url>/2021/03/04/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/</url>
+    <url>/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<p>我的博客中所用的技术等其他关于本博客的说明内容。</p>
 <h1 id="文章列表">文章列表</h1>
 <p><a href="https://zuoanzoom.github.io/2021/03/06/C-inline-%E7%AE%80%E5%8D%95%E6%8E%A2%E8%AE%A8/">C++ inline 简单探讨</a></p>
